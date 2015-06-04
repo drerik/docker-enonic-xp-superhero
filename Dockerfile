@@ -13,5 +13,5 @@ RUN wget -O /enonic-xp/home/deploy/superhero-0.1.0-SNAPSHOT.jar http://repo.enon
 # add vhost config
 ADD com.enonic.xp.web.vhost.cfg /enonic-xp/home/config/com.enonic.xp.web.vhost.cfg
 
+VOLUME /enonic-xp/home
 
-CMD /launcher.sh

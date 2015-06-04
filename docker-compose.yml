@@ -1,0 +1,12 @@
+frontend:
+  image: enonic/xp-frontend
+  ports:
+  - "80:80"
+  links:
+  - "superhero:app"
+superhero:
+  build: .
+  volumes_from:
+  - storage
+storage:
+  build: .
