@@ -3,10 +3,11 @@ frontend:
   ports:
   - "80:80"
   links:
-  - "superhero:app"
-superhero:
+  - "app"
+app:
   build: .
   volumes_from:
   - storage
 storage:
   build: .
+  command: "echo 'Enonic XP storage container'"
